@@ -1,0 +1,39 @@
+.tob-table {
+
+  border-collapse:collapse;
+  table-layout: fixed;
+  width: 100%;
+  text-align: center;
+  border: $table-border;
+  margin-bottom: $padding-base;
+  box-shadow: $table-shadow;
+
+  tbody tr {
+    background-color: $table-cell-colour-default;
+  }
+
+  tbody tr:nth-child(odd) {
+    background-color: $table-cell-colour-striped;
+  }
+
+  tfoot tr,
+  thead tr {
+    font-weight: bold;
+    text-align: center;
+    border: $table-border;
+  }
+
+  th, td {
+    padding: $padding-base;
+    border: none;
+  }
+
+  tr + tr {
+    border-top: $table-row-border;
+  }
+
+  th {
+    font-weight: bold;
+  }
+
+}

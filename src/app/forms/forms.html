@@ -1,0 +1,128 @@
+<h2>Form Elements</h2>
+
+<form name="main.details">
+
+  <h3>Checkboxes</h3>
+
+  <p>You can just use normal checkboxes.</p>
+
+  <div>
+    <div class="tob-check">
+      <input id="checkbox-default"
+             type="checkbox"
+             ng-model="forms.checkboxes[0]"
+             ng-init="forms.checkboxes[0]=false">
+      <label for="checkbox-default">Square checkbox (default)</label>
+    </div>
+    <div><strong>Value</strong>: {{ forms.checkboxes[0] }}</div>
+  </div>
+
+  <div>
+    <div class="tob-check tob-check-circle">
+      <input id="checkbox-circle"
+             type="checkbox"
+             ng-model="forms.checkboxes[1]"
+             ng-init="forms.checkboxes[1]=false">
+      <label for="checkbox-circle">Circular checkbox</label>
+      <div><strong>Value</strong>: {{ forms.checkboxes[1] }}</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="tob-check">
+      <input id="checkbox-disabled" type="checkbox" disabled>
+      <label for="checkbox-disabled">Disabled checkbox</label>
+    </div>
+  </div>
+
+
+  <h2>Radio Buttons</h2>
+  <div class="tob-radio" ng-repeat="label in ['One', 'Two', 'Three']">
+    <input id="radio-{{ $index }}"
+           ng-value="label"
+           ng-model="forms.radiosModel"
+           type="radio"
+           ng-init="forms.radiosModel = 'One'">
+    <label for="radio-{{ $index }}">{{ label }}</label>
+  </div>
+
+  <h4>Custom Icons</h4>
+  <p>Customise the checkbox icons with CSS. For example, get a Font Awesome unicode definition from the <a href="https://fortawesome.github.io/Font-Awesome/cheatsheet/">Font Awesome cheat sheet</a> and use that in your stylesheet:</p>
+
+  <div class="tob-code-block">
+  <pre><code>.tob-checkbox {
+
+  input[type="checkbox"] + label:before {
+
+    // Unicode of icon when unchecked.
+    content: '\f1db';
+
+  }
+
+  input[type="checkbox"]:checked + label:before {
+
+    // Unicode of icon when checked.
+    content: '\f058';
+  }
+
+}</code></pre>
+  </div>
+
+
+  <h3>Inputs</h3>
+
+  <div class="row">
+    <div class="tob-input-container column-2">
+      <label for="forename">Forename</label>
+      <input type="text" id="forename" ng-minlength="10" ng-model="main.forename" name="forename">
+      <div ng-messages="main.details.forename.$error" ng-if="main.details.forename.$dirty">
+      <p ng-message="required">Ten characters required</p>
+    </div>
+  </div>
+
+    <div class="column-2">
+      <div class="tob-input-container">
+        <label for="surname">Surname</label>
+        <input type="text" id="surname">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="column-2">
+      <div class="tob-input-container">
+        <label for="amount">Amount</label>
+        <div class="tob-input-icons">
+          <i class="fa fa-credit-card"></i>
+          <input type="number" id="amount" value="100">
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+  <div class="column-2">
+  <div class="tob-input-container">
+  <label for="search">Search</label>
+  <div class="tob-input-icons">
+  <i class="fa fa-table"></i>
+  <input type="text" id="search">
+  <i class="fa fa-search"></i>
+  </div>
+  </div>
+  </div>
+
+  <!--<div class="column-2">-->
+  <!--<tob-check class="tob-label-above" value="main.checkValue">Something</tob-check>-->
+  <!--</div>-->
+
+  </div>
+
+  <div class="tob-input-container">
+  <i class="tob-input-icon-left"></i>
+  <label for="address">Address</label>
+  <textarea name="address" id="address" cols="30" rows="3"></textarea>
+  </div>
+
+  </div>
+
+</form>

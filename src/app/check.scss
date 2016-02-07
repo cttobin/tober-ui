@@ -1,0 +1,83 @@
+@mixin checkbox ($icon-unchecked, $icon-checked) {
+  input[type="checkbox"] + label:before {
+    content: $icon-unchecked;
+  }
+  input[type="checkbox"]:checked + label:before {
+    content: $icon-checked;
+  }
+}
+
+@mixin check-radio ($type, $icon-off, $icon-on) {
+
+  input[type="#{$type}"] {
+    display: none;
+  }
+
+  input[disabled][type="#{$type}"] + label {
+    color: $checkbox-disabled-label-color;
+    &:before {
+      color: $checkbox-disabled-icon-color;
+    }
+    &, &:before {
+      cursor: not-allowed;
+    }
+  }
+
+  input[type="#{$type}"] + label:before {
+    @extend .fa, .fa-fw;
+    content: $icon-off;
+    text-align: center;
+    cursor: pointer;
+    padding-right: $padding-xx-small;
+  }
+  input[type="#{$type}"]:checked + label:before {
+    content: $icon-on;
+  }
+  label {
+    cursor: pointer;
+  }
+
+  &.negative input[type="#{$type}"] + label:before {
+    color: $negative;
+  }
+  &.positive input[type="#{$type}"] + label:before {
+    color: $positive;
+  }
+  &.balanced input[type="#{$type}"] + label:before {
+    color: $balanced;
+  }
+  &.dark input[type="#{$type}"] + label:before {
+    color: $dark;
+  }
+  &.light input[type="#{$type}"] + label:before {
+    color: $light;
+  }
+
+}
+
+.tob-radio, .tob-check {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  line-height: $input-line-height;
+}
+
+
+.tob-check {
+  @include check-radio("checkbox", $checkbox-icon-unchecked, $checkbox-icon-checked);
+  &.tob-check-square {
+    @include checkbox('\f096', '\f14a');
+  }
+  &.tob-check-circle {
+    @include checkbox('\f1db', '\f058');
+  }
+}
+
+.tob-radio {
+  @include check-radio("radio", $radio-icon-unchecked, $radio-icon-checked);
+}
+
+// Space adjacent inline checkboxes.
+.tob-check + .tob-check {
+  padding-left: $padding-base;
+}

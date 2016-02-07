@@ -1,0 +1,42 @@
+@mixin spacing-vertical ($name, $spacing-amount) {
+  .tob-padding-v#{$name} {
+    padding-top: $spacing-amount;
+    padding-bottom: $spacing-amount;
+  }
+  .tob-margin-v#{$name} {
+    margin-top: $spacing-amount;
+    margin-bottom: $spacing-amount;
+  }
+}
+
+@mixin spacing-horizontal ($name, $spacing-amount) {
+  .tob-padding-h#{$name} {
+    padding-top: $spacing-amount;
+    padding-bottom: $spacing-amount;
+  }
+  .tob-margin-h#{$name} {
+    margin-top: $spacing-amount;
+    margin-bottom: $spacing-amount;
+  }
+}
+
+@mixin spacing ($name, $spacing-amount) {
+
+  @include spacing-vertical($name, $spacing-amount);
+  @include spacing-horizontal($name, $spacing-amount);
+
+  .tob-padding#{$name} { padding: $spacing-amount; }
+  .tob-margin#{$name} { margin: $spacing-amount; }
+}
+
+.tob-no-margin-top {
+  margin-top: 0;
+}
+
+@include spacing(-xxs, $padding-xx-small);
+@include spacing(-xs, $padding-x-small);
+@include spacing(-s, $padding-small);
+@include spacing(null, $padding-base);
+@include spacing(-l, $padding-large);
+@include spacing(-xl, $padding-x-large);
+@include spacing(-xxl, $padding-xx-large);

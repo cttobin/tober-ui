@@ -1,0 +1,23 @@
+nav {
+  @include column(1/4);
+}
+
+nav + div {
+  @include column(3/4);
+}
+
+nav li {
+
+  &, .demo-component-type {
+    line-height: 30px;
+  }
+
+  .demo-component-type {
+    display: inline-block;
+    font-size: $font-size-small;
+    background-color: $background-color-d-1;
+    padding: 0 $padding-base;
+    border-radius: 4px;
+  }
+
+}

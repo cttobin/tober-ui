@@ -1,0 +1,11 @@
+code {
+  font-family: Monaco, Consolas, monospace !important;
+}
+
+.tob-code-block {
+  background-color: #eaeaea;
+  padding: $padding-base;
+  margin-top: $padding-base;
+  border: 1px solid #d1d1d1;
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.1);
+}

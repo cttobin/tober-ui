@@ -1,0 +1,69 @@
+@mixin checkbox ($icon-unchecked, $icon-checked) {
+  input[type="checkbox"] + label:before {
+    content: $icon-unchecked;
+  }
+  input[type="checkbox"]:checked + label:before {
+    content: $icon-checked;
+  }
+}
+
+tob-check {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  line-height: $input-line-height;
+  input[type="checkbox"] {
+    display: none;
+  }
+  input[disabled][type="checkbox"] + label {
+    color: $checkbox-disabled-label-color;
+    &:before {
+      color: $checkbox-disabled-icon-color;
+    }
+    &, &:before {
+      cursor: not-allowed;
+    }
+  }
+  input[type="checkbox"] + label:before {
+    @extend .fa, .fa-fw;
+    content: $checkbox-icon-unchecked;
+    text-align: center;
+    cursor: pointer;
+    padding-right: $padding-xx-small;
+  }
+  input[type="checkbox"]:checked + label:before {
+    content: $checkbox-icon-checked;
+  }
+  label {
+    cursor: pointer;
+  }
+  &.negative input[type="checkbox"] + label:before {
+    color: $negative;
+  }
+  &.positive input[type="checkbox"] + label:before {
+    color: $positive;
+  }
+  &.balanced input[type="checkbox"] + label:before {
+    color: $balanced;
+  }
+  &.dark input[type="checkbox"] + label:before {
+    color: $dark;
+  }
+  &.light input[type="checkbox"] + label:before {
+    color: $light;
+  }
+
+  &.tob-checkbox-square {
+    @include checkbox('\f096', '\f14a');
+  }
+
+  &.tob-checkbox-circle {
+    @include checkbox('\f1db', '\f058');
+  }
+
+}
+
+// Space adjacent inline checkboxes.
+tob-check + tob-check {
+  padding-left: $padding-base;
+}

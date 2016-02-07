@@ -1,0 +1,12 @@
+<div class="tob-tabs-nav">
+  <div
+       ng-repeat="tab in tabs.tabs track by $index"
+       ng-class="{'tob-tab-active': tab.active}"
+       ng-click="tabs.selectTab(tab)"
+       ng-bind-html="tabs.renderTabLabel(tab.label)">
+  </div>
+</div>
+
+<div class="tob-tabs-content">
+  <ng-transclude></ng-transclude>
+</div>

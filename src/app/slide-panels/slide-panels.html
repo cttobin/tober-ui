@@ -1,0 +1,47 @@
+<h1>Slide Panels</h1>
+<h2>Basic</h2>
+<div class="tob-button" ng-click="slidePanels.showRight = !slidePanels.showRight">
+  Open right
+</div>
+
+<div class="tob-button" ng-click="slidePanels.showLeft = !slidePanels.showLeft">
+  Open left
+</div>
+
+<tob-slide-panel show="slidePanels.showRight">
+  <h2>Slide panel negative</h2>
+  <p>This panel is just custom content, no headers or footers.</p>
+</tob-slide-panel>
+
+<tob-slide-panel show="slidePanels.showLeft" class="tob-slide-panel-left">
+  <div class="tob-heading tob-negative">
+    <div class="tob-heading-buttons">
+      <i class="fa fa-times" ng-click="slidePanels.showLeft = false"></i>
+    </div>
+    <h3>Side panel header</h3>
+  </div>
+  <div class="tob-content">
+    Side panel content
+  </div>
+  <div class="tob-footer">
+    Side panel footer
+  </div>
+</tob-slide-panel>
+
+<h2>Colour classes</h2>
+
+<div ng-repeat="colourClass in slidePanels.colourClasses">
+
+  <div class="tob-button"
+       ng-class="'tob-' + colourClass"
+       ng-click="slidePanels.colourClassesPanels[$index] = !slidePanels.colourClassesPanels[$index]">
+    Open assertive panel
+  </div>
+
+  <tob-slide-panel show="slidePanels.colourClassesPanels[$index]" ng-class="'tob-' + colourClass">
+    <h2>{{ :: colourClass }} slide panel</h2>
+    <p>This panel is just custom content, no headers or footers.</p>
+  </tob-slide-panel>
+
+</div>
+

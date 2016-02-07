@@ -1,0 +1,333 @@
+<!doctype html>
+<html ng-app="uiThing" ng-strict-di>
+  <head>
+    <meta charset="utf-8">
+    <title>uiThing</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+    <!-- build:css({.tmp/serve,src}) styles/vendor.css -->
+    <!-- bower:css -->
+    <!-- run `gulp inject` to automatically populate bower styles dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css({.tmp/serve,src}) styles/app.css -->
+    <!-- inject:css -->
+    <!-- css files will be automatically insert here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+  </head>
+  <body>
+
+    <div ui-view></div>
+
+    <!--<div class="container" ng-controller="MainController as main">-->
+
+      <!--<div class="tob-sidebar">-->
+        <!--<div class="tob-sidebar-mask">&nbsp;</div>-->
+        <!--<div class="tob-sidebar-content">-->
+          <!--<h2>Sidebar Title</h2>-->
+          <!--<p>Some sidebar content.</p>-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<h2>Toasts</h2>-->
+
+      <!--<div>-->
+        <!--<div class="tob-text-button positive"-->
+             <!--ng-click="main.showToastSuccess()">Success</div>-->
+        <!--<div class="tob-text-button negative"-->
+             <!--ng-click="main.showToastError()">Error</div>-->
+        <!--<div class="tob-text-button balanced"-->
+             <!--ng-click="main.showToastInfo()">Info</div>-->
+        <!--<div class="tob-text-button warning"-->
+             <!--ng-click="main.showToastWarning()">Warning</div>-->
+      <!--</div>-->
+
+      <!--<h1  ng-if="true" class="fx-fade-normal">Primary Heading that is long and hopefully wraps to see the line height</h1>-->
+      <!--<h2>Secondary Heading</h2>-->
+      <!--<h3>Tertiary Heading</h3>-->
+      <!--<h4>Quaternary Heading</h4>-->
+      <!--<h5>Quinary Heading</h5>-->
+      <!--<h6>Senary Heading</h6>-->
+      <!--<p>"I will wager something now," whispered Stubb to Flask, "that some one in that missing boat wore off that Captain's best coat; mayhap, his watch&mdash;he's so cursed anxious to get it back. Who ever heard of two pious whale-ships cruising after one missing whale-boat in the height of the whaling season? See, Flask, only see how pale he looks&mdash;pale in the very buttons of his eyes&mdash;look&mdash;it wasn't the coat&mdash;it must have been the&mdash;"</p>-->
+
+      <!--<p>"My boy, my own boy is among them. For God's sake&mdash;I beg, I conjure"&mdash;here exclaimed the stranger Captain to Ahab, who thus far had but icily received his petition. "For eight-and-forty hours let me charter your ship&mdash;I will gladly pay for it, and roundly pay for it&mdash;if there be no other way&mdash;for eight-and-forty hours only&mdash;only that&mdash;you must, oh, you must, and you SHALL do this thing."</p>-->
+
+      <!--<h3>Tertiary Heading</h3>-->
+      <!--<p>"His son!" cried Stubb, "oh, it's his son he's lost! I take back the coat and watch&mdash;what says Ahab? We must save that boy."</p>-->
+
+      <!--<h2>Secondary Heading</h2>-->
+      <!--<p>"He's drowned with the rest on 'em, last night," said the old Manx sailor standing behind them; "I heard; all of ye heard their spirits."</p>-->
+
+      <!--<h2>Form Elements</h2>-->
+
+      <!--<form name="main.details">-->
+
+        <!--<tob-check class="positive">What</tob-check>-->
+
+        <!--<div class="row">-->
+          <!--<div class="tob-input-container column-2">-->
+            <!--<label for="forename">Forename</label>-->
+            <!--<input type="text" id="forename" ng-minlength="10" ng-model="main.forename" name="forename">-->
+            <!--<div ng-messages="main.details.forename.$error" ng-if="main.details.forename.$dirty">-->
+              <!--<p ng-message="required">Ten characters required</p>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <!--<div class="column-2">-->
+            <!--<div class="tob-input-container">-->
+              <!--<label for="surname">Surname</label>-->
+              <!--<input type="text" id="surname">-->
+            <!--</div>-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--<div class="row">-->
+          <!--<div class="column-2">-->
+            <!--<div class="tob-input-container">-->
+              <!--<label for="amount">Amount</label>-->
+              <!--<div class="tob-input-icons">-->
+                <!--<i class="fa fa-credit-card"></i>-->
+                <!--<input type="number" id="amount" value="100">-->
+              <!--</div>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <!--<div class="row">-->
+            <!--<div class="column-2">-->
+              <!--<div class="tob-input-container">-->
+                <!--<label for="search">Search</label>-->
+                <!--<div class="tob-input-icons">-->
+                  <!--<i class="fa fa-table"></i>-->
+                  <!--<input type="text" id="search">-->
+                  <!--<i class="fa fa-search"></i>-->
+                <!--</div>-->
+              <!--</div>-->
+            <!--</div>-->
+
+          <!--&lt;!&ndash;<div class="column-2">&ndash;&gt;-->
+            <!--&lt;!&ndash;<tob-check class="tob-label-above" value="main.checkValue">Something</tob-check>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+        <!--</div>-->
+
+        <!--<div class="tob-input-container">-->
+          <!--<i class="tob-input-icon-left"></i>-->
+          <!--<label for="address">Address</label>-->
+          <!--<textarea name="address" id="address" cols="30" rows="3"></textarea>-->
+        <!--</div>-->
+
+        <!--</div>-->
+
+      <!--</form>-->
+
+      <!--<div class="tob-input-container">-->
+        <!--<label>Something</label>-->
+        <!--&lt;!&ndash;<tob-select>&ndash;&gt;-->
+          <!--&lt;!&ndash;<tob-select-placeholder>&ndash;&gt;-->
+            <!--&lt;!&ndash;Please select one...&ndash;&gt;-->
+          <!--&lt;!&ndash;</tob-select-placeholder>&ndash;&gt;-->
+          <!--&lt;!&ndash;<tob-select-item-active>&ndash;&gt;-->
+            <!--&lt;!&ndash;{{ item.name }}&ndash;&gt;-->
+          <!--&lt;!&ndash;</tob-select-item-active>&ndash;&gt;-->
+          <!--&lt;!&ndash;<tob-select-items>&ndash;&gt;-->
+            <!--&lt;!&ndash;<tob-select-item value="item" item="item" ng-repeat="item in main.selectItems">&ndash;&gt;-->
+              <!--&lt;!&ndash;<i class="fa fa-fw" ng-class="'fa-' + item.icon"></i> {{ item.name }}&ndash;&gt;-->
+            <!--&lt;!&ndash;</tob-select-item>&ndash;&gt;-->
+          <!--&lt;!&ndash;</tob-select-items>&ndash;&gt;-->
+        <!--&lt;!&ndash;</tob-select>&ndash;&gt;-->
+
+
+        <!--&lt;!&ndash;<ui-select ng-model="main.selected">&ndash;&gt;-->
+          <!--&lt;!&ndash;<ui-select-match>&ndash;&gt;-->
+            <!--&lt;!&ndash;<span ng-bind="$select.selected.name"></span>&ndash;&gt;-->
+          <!--&lt;!&ndash;</ui-select-match>&ndash;&gt;-->
+          <!--&lt;!&ndash;<ui-select-choices repeat="item in main.selectItems">&ndash;&gt;-->
+            <!--&lt;!&ndash;<i class="fa fa-fw" ng-class="'fa-' + item.icon"></i> {{ item.name }}&ndash;&gt;-->
+          <!--&lt;!&ndash;</ui-select-choices>&ndash;&gt;-->
+        <!--&lt;!&ndash;</ui-select>&ndash;&gt;-->
+      <!--</div>-->
+
+      <!--<h2>Table</h2>-->
+      <!--<table class="tob-table">-->
+        <!--<thead>-->
+        <!--<tr>-->
+          <!--<th>Name</th>-->
+          <!--<th>Age</th>-->
+          <!--<th>Occupation</th>-->
+        <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--<tr>-->
+          <!--<td>John Smith</td>-->
+          <!--<td>29</td>-->
+          <!--<td>Accountant</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>Jimmy Mulls</td>-->
+          <!--<td>32</td>-->
+          <!--<td>Consultant</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>Mullen Jim</td>-->
+          <!--<td>21</td>-->
+          <!--<td>Student</td>-->
+        <!--</tr>-->
+        <!--<tr>-->
+          <!--<td>John Mull</td>-->
+          <!--<td>46</td>-->
+          <!--<td>Gardener</td>-->
+        <!--</tr>-->
+        <!--</tbody>-->
+      <!--</table>-->
+
+      <!--<div class="tob-button tob-button-right positive">-->
+        <!--Add row-->
+        <!--<i class="fa fa-plus"></i>-->
+      <!--</div>-->
+
+      <!--<h2>Modals</h2>-->
+
+      <!--<div>-->
+        <!--<div class="tob-button balanced" ng-click="main.showModal()">-->
+          <!--<i class="fa fa-external-link"></i>-->
+          <!--Open modal-->
+        <!--</div>-->
+      <!--</div>-->
+
+      <!--<h2>Buttons</h2>-->
+
+      <!--<h3>Text &amp; Icon Buttons</h3>-->
+      <!--<div>-->
+        <!--<div class="tob-button balanced">Next <i class="fa fa-chevron-circle-right"></i></div>-->
+        <!--<div class="tob-button positive">Confirm <i class="fa fa-check"></i></div>-->
+        <!--<div class="tob-button negative">Delete <i class="fa fa-trash"></i></div>-->
+        <!--<div class="tob-button dark">Save <i class="fa fa-save"></i></div>-->
+        <!--<div class="tob-button light">Cancel <i class="fa fa-ban"></i></div>-->
+      <!--</div>-->
+
+      <!--<h3>Text Buttons</h3>-->
+      <!--<div>-->
+        <!--<div class="tob-text-button balanced">Next</div>-->
+        <!--<div class="tob-text-button positive">Confirm</div>-->
+        <!--<div class="tob-text-button negative">Delete</div>-->
+        <!--<div class="tob-text-button dark">Save</div>-->
+        <!--<div class="tob-text-button light">Cancel</div>-->
+      <!--</div>-->
+
+      <!--<h3>Icon Buttons</h3>-->
+      <!--<div>-->
+        <!--<div class="tob-icon-button balanced"><i class="fa fa-chevron-circle-right"></i></div>-->
+        <!--<div class="tob-icon-button positive"><i class="fa fa-check"></i></div>-->
+        <!--<div class="tob-icon-button negative"><i class="fa fa-trash"></i></div>-->
+        <!--<div class="tob-icon-button dark"><i class="fa fa-save"></i></div>-->
+        <!--<div class="tob-icon-button light"><i class="fa fa-ban"></i></div>-->
+      <!--</div>-->
+
+      <!--&lt;!&ndash;<div class="tob-text-button">&ndash;&gt;-->
+        <!--&lt;!&ndash;Enter&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<br>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<div class="tob-button tob-button-block negative-bg">&ndash;&gt;-->
+        <!--&lt;!&ndash;Cancel&ndash;&gt;-->
+        <!--&lt;!&ndash;<i class="fa fa-times"></i>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<div class="tob-button positive-bg">&ndash;&gt;-->
+        <!--&lt;!&ndash;Submit&ndash;&gt;-->
+        <!--&lt;!&ndash;<i class="fa fa-check"></i>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+
+      <!--&lt;!&ndash;<div class="tob-icon-button balanced-bg">&ndash;&gt;-->
+        <!--&lt;!&ndash;<i class="fa fa-warning"></i>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<div class="tob-modal">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="tob-modal-mask">&nbsp;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="tob-modal-content">&ndash;&gt;-->
+          <!--&lt;!&ndash;<div class="tob-modal-icon">&ndash;&gt;-->
+            <!--&lt;!&ndash;<i class="fa fa-warning"></i>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;<h2>Error occurred</h2>&ndash;&gt;-->
+          <!--&lt;!&ndash;<p>You can't do that thing you're doing, so calm down.</p>&ndash;&gt;-->
+
+          <!--&lt;!&ndash;<div class="tob-modal-buttons">&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="tob-button negative-bg">&ndash;&gt;-->
+              <!--&lt;!&ndash;<i class="fa fa-times"></i>&ndash;&gt;-->
+              <!--&lt;!&ndash;Cancel&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--&lt;!&ndash;<div class="tob-button balanced-bg">&ndash;&gt;-->
+              <!--&lt;!&ndash;<i class="fa fa-refresh"></i>&ndash;&gt;-->
+              <!--&lt;!&ndash;Try again&ndash;&gt;-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+          <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;&lt;!&ndash;   <br>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="tob-select">&ndash;&gt;-->
+          <!--&lt;!&ndash;Selected item&ndash;&gt;-->
+        <!--&lt;!&ndash;</div> &ndash;&gt;&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<br>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<div class="tob-tabs">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="tob-tab-active"><i class="fa fa-phone"></i> Calls</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div><i class="fa fa-envelope"></i> Texts</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div><i class="fa fa-signal"></i> Data</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;<p>Some content or other</p>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<div class="tob-input-container">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label for="amount">Amount</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<div class="tob-input-icon">&ndash;&gt;-->
+          <!--&lt;!&ndash;<i class="fa fa-credit-card"></i>&ndash;&gt;-->
+          <!--&lt;!&ndash;<input type="number" id="amount" value="100">&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<div class="tob-input-container">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label for="name">Full name</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<input type="text" id="name" value="Some value">&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<div class="tob-input-container">&ndash;&gt;-->
+        <!--&lt;!&ndash;<label for="address">Address</label>&ndash;&gt;-->
+        <!--&lt;!&ndash;<textarea name="address" id="address" cols="30" rows="3"></textarea>&ndash;&gt;-->
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;<br><br>&ndash;&gt;-->
+      <!--&lt;!&ndash;<div>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<div class="tob-button balanced-bg tob-button-outline">&ndash;&gt;-->
+          <!--&lt;!&ndash;Other option&ndash;&gt;-->
+          <!--&lt;!&ndash;<i class="fa fa-question-circle"></i>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+      <!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+    <!--</div>-->
+
+    <!-- build:js(src) scripts/vendor.js -->
+    <!-- bower:js -->
+    <!-- run `gulp inject` to automatically populate bower script dependencies -->
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js({.tmp/serve,.tmp/partials,src}) scripts/app.js -->
+    <!-- inject:js -->
+    <!-- js files will be automatically insert here -->
+    <!-- endinject -->
+
+    <!-- inject:partials -->
+    <!-- angular templates will be automatically converted in js and inserted here -->
+    <!-- endinject -->
+    <!-- endbuild -->
+
+  </body>
+</html>

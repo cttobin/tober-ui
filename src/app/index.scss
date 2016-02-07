@@ -1,0 +1,515 @@
+/* Do not remove the comments below. It's the markers used by wiredep to inject
+   sass dependencies when defined in the bower.json of your dependencies */
+// bower:scss
+// endbower
+
+@import "node_modules/jeet/scss/jeet/index";
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+$font-colour: #444;
+$background-color: #fff;
+$background-color-d-1: darken($background-color, 5%);
+$background-color-d-2: darken($background-color, 15%);
+
+$padding-xx-small: 4px;
+$padding-x-small: 6px;
+$padding-small: 8px;
+$padding-base: 10px;
+$padding-large: 12px;
+$padding-x-large: 14px;
+$padding-xx-large: 16px;
+
+$font-size-x-small: 0.8rem;
+$font-size-small: 1.132rem;;
+$font-size-base: 1.6rem;
+$font-size-large: 2.262rem;
+$font-size-x-large: 4.523rem;
+
+$label-line-height: 22px;
+$input-label-color: #777;
+
+$input-line-height: 40px;
+$input-border-colour: #d1d1d1;
+$input-border-radius: 2px;
+$input-background-colour: #f6f6f6;
+$input-shadow: 0 1px 2px #eaeaea;
+$input-icon-width: 40px;
+$input-icon-background-color: darken($input-background-colour, 5%);
+
+$select-background-color: lighten($input-background-colour, 1%);
+$select-items-box-shadow: inset 0 2px 1px -1px darken($input-background-colour, 5%);
+$select-item-border-color: darken($input-background-colour, 6%);
+$select-item-hover-color: darken($input-background-colour, 1%);
+
+$table-border: 1px solid #d1d1d1;
+$table-cell-colour-default: lighten(#eaeaea, 6%);
+$table-cell-colour-striped: lighten(#eaeaea, 4%);
+$table-row-border: 1px solid #eaeaea;
+$table-shadow: $input-shadow;
+
+
+// Colours.
+$balanced: #2980b9;
+$positive: #27ae60;
+$negative: #e74c3c;
+$light: #ecf0f1;
+$dark: #2c3e50;
+
+$balanced-background-text-color: white;
+$positive-background-text-color: white;
+$negative-background-text-color: white;
+
+
+// Buttons.
+$button-height: 34px;
+$button-color: #fff;
+$button-border-radius: 3px;
+$button-box-shadow: 0 1px 2px -1px rgba(0, 0, 0, 0.5);
+$button-shadow-active: none;
+
+
+// Modals.
+$modal-mask: linear-gradient(40deg, transparent 40%, #34495e), linear-gradient(-40deg, rgba(255, 255, 255, 0.5) 10%, #34495e 90%);
+$modal-width: 420px;
+$modal-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
+
+$modal-header-line-height: 60px;
+$modal-header-button-width: 50px;
+
+// Side bar.
+$sidebar-mask: linear-gradient(90deg, transparent 10%, #34495e), linear-gradient(-30deg, rgba(255, 255, 255, 0.8) 20%, #34495e 90%);
+$sidebar-shadow: 2px 0 30px rgba(0, 0, 0, 0.5);
+$sidebar-min-width: 400px;
+$sidebar-max-width: 600px;
+
+
+// Z-indexing.
+$sidebar-z-index: 900;
+$modal-z-index: 1000;
+
+// Toasts.
+$toast-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+
+// Checkboxes.
+$checkbox-icon-unchecked: '\f096';
+$checkbox-icon-checked: '\f14a';
+$checkbox-disabled-icon-color: #aaa;
+$checkbox-disabled-label-color: #888;
+
+// Radios.
+$radio-icon-unchecked: '\f10c';
+$radio-icon-checked: '\f192';
+
+@mixin text-colours () {
+  &.balanced { color: $balanced; }
+  &.positive { color: $positive; }
+  &.negative { color: $negative; }
+}
+
+@mixin background-colours () {
+  &.tob-balanced {
+    background-color: $balanced;
+    color: $balanced-background-text-color;
+  }
+  &.tob-positive {
+    background-color: $positive;
+    color: $positive-background-text-color;
+  }
+  &.tob-negative {
+    background-color: $negative;
+    color: $negative-background-text-color;
+  }
+  &.tob-dark {
+    background-color: $dark;
+    color: white;
+  }
+  &.tob-light {
+    background-color: $light;
+    color: $dark;
+  }
+}
+
+@mixin background-colours-child ($child-class) {
+  &.tob-balanced {
+    .#{$child-class} {
+      background-color: $balanced;
+      color: $balanced-background-text-color;
+    }
+  }
+  &.tob-positive {
+    .#{$child-class} {
+      background-color: $positive;
+      color: $positive-background-text-color;
+    }
+  }
+  &.tob-negative {
+    .#{$child-class} {
+      background-color: $negative;
+      color: $negative-background-text-color;
+    }
+  }
+  &.tob-dark {
+    .#{$child-class} {
+      background-color: $dark;
+      color: white;
+    }
+  }
+  &.tob-light {
+    .#{$child-class} {
+      background-color: $light;
+      color: $dark;
+    }
+  }
+}
+
+@mixin border-colours() {
+  &.balanced { border: 1px solid $balanced; }
+  &.positive { border: 1px solid $positive; }
+  &.negative { border: 1px solid $negative; }
+}
+
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+[ui-view] {
+  max-width: 800px;
+  margin: $padding-base auto;
+}
+
+
+.clearfix {
+  overflow: auto;
+}
+
+body {
+  background-color: $background-color;
+}
+
+.tob-input-container {
+  margin-bottom: $padding-large;
+  label:not(.tob-check-label) {
+    @include text-colours();
+    display: block;
+    line-height: $label-line-height;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    width: 100%;
+    color: $input-label-color;
+    padding-left: $padding-xx-small;
+  }
+}
+
+
+.tob-input-icons {
+  position: relative;
+  i {
+    display: block;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    line-height: $input-line-height + 2px;
+    text-align: center;
+    width: $input-icon-width;
+    background-color: $input-icon-background-color;
+    border-right: 1px solid $input-border-colour;
+    border-radius: $input-border-radius 0 0 $input-border-radius;
+  }
+  i + input {
+    padding-left: $input-icon-width + $padding-small;
+  }
+  input + i {
+    right: 1px;
+    left: auto;
+    border-left: 1px solid $input-border-colour;
+    border-right: 0;
+    border-radius: 0 $input-border-radius $input-border-radius 0;
+  }
+}
+
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+textarea,
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"] {
+  width: 100%;
+  border: 1px solid $input-border-colour;
+  padding-left: $padding-base;
+  font-size: $font-size-base;
+  border-radius: $input-border-radius;
+  box-shadow: $input-shadow;
+  background-color: $input-background-colour;
+  transition: border, background-color 0.25s linear;
+  &.ng-invalid, &.ng-invalid:focus {
+    border: 1px solid $negative;
+  }
+  &.ng-invalid {
+    background-color: mix($input-background-colour, lighten($negative, 30%));
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid darken($input-border-colour, 30%);
+    background-color: $input-background-colour;
+  }
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="tel"] {
+  line-height: $input-line-height;
+}
+
+textarea {
+  padding-top: $padding-base;
+  padding-bottom: $padding-base;
+}
+
+[ng-message] {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  margin: 1px $input-border-radius 0 0;
+  font-size: $font-size-small;
+  background-color: lighten($negative, 5%);
+  box-shadow: inset 0 2px 1px $negative;
+  color: white;
+  padding: ($padding-xx-small - 1px) $padding-small $padding-xx-small $padding-small;
+  border-bottom-right-radius: $input-border-radius;
+  border-bottom-left-radius: $input-border-radius;
+}
+
+textarea {
+  resize: none;
+}
+
+
+// Tabs.
+.tob-tabs {
+  border-bottom: 1px solid #d1d1d1;
+  @extend .clearfix;
+  > div {
+    float: left;
+    padding: $padding-base $padding-xx-large;
+    border-left: 1px solid #d1d1d1;
+    border-top: 1px solid #d1d1d1;
+    i {
+      display: inline-block;
+      padding-right: $padding-xx-small;
+    }
+    &:last-child {
+      border-right: 1px solid #d1d1d1;
+    }
+  }
+}
+
+// Drop-downs.
+.tob-select {
+  padding: $padding-base;
+  width: 100%;
+  border: 1px solid #d1d1d1;
+}
+
+form {
+
+  .row {
+    @include cf();
+  }
+
+  .column-2 {
+    @include column(1/2);
+  }
+
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tob-label-above {
+  margin-top: $label-line-height;
+}
+
+.toast-success {
+  background-color: $positive;
+  &:hover {
+    background-color: darken($positive, 5%);
+  }
+  &:before {
+    content: '\f058';
+  }
+}
+
+.toast-error {
+  background-color: $negative;
+  &:hover {
+    background-color: darken($negative, 5%);
+  }
+  &:before {
+    content: '\f05e';
+  }
+}
+
+.toast-info {
+  background-color: $balanced;
+  &:hover {
+    background-color: darken($balanced, 5%);
+  }
+  &:before {
+    content: '\f05a';
+  }
+}
+
+.toast-warning {
+  background-color: lighten($negative, 8%);
+  &:hover {
+    background-color: lighten($negative, 2%);
+  }
+  &:before {
+    content: '\f06a';
+  }
+}
+
+.toast {
+  transition: background-color linear 0.25s;
+}
+
+.toast:before {
+  font-family: "FontAwesome";
+  position: absolute;
+  top: 50%;
+  margin-top: -15px;
+  line-height: 30px;
+  left: 15px;
+  font-size: $font-size-large;
+}
+
+.toast-title {
+  margin-bottom: $padding-xx-small;
+}
+
+#toast-container > .toast-success,
+#toast-container > .toast-info,
+#toast-container > .toast-error,
+#toast-container > .toast-warning {
+  background-image: none !important;
+}
+
+.toast-close-button:active,
+button.toast-close-button:active {
+  outline: 0;
+}
+
+#toast-container > div {
+  box-shadow: $toast-box-shadow;
+  &:hover {
+    box-shadow: $toast-box-shadow;
+  }
+}
+
+$side-bar-width: 320px;
+$side-bar-color: $light;
+$side-bar-background-color: $dark;
+$side-bar-padding: $padding-xx-large;
+
+$side-bar-list-border-color: lighten($side-bar-background-color, 5%);
+$side-bar-heading-border-bottom: 1px solid lighten($side-bar-background-color, 5%);
+
+.tob-side-bar {
+
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  color: $side-bar-color;
+  background-color: $side-bar-background-color;
+  width: $side-bar-width;
+
+  .tob-heading {
+    @extend .h2;
+    margin-top: 0;
+    padding: $padding-small 0;
+    margin-bottom: $padding-small;
+  }
+
+  .tob-list li {
+    padding: $padding-base;
+    cursor: pointer;
+  }
+
+  .tob-list li + li {
+    border-top: 1px solid $side-bar-list-border-color;
+  }
+
+}
+
+.tob-heading {
+  @include background-colours();
+  position: relative;
+  h1, h2, h3, h4, h5, h6 {
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.tob-footer {
+  @include background-colours();
+}
+
+.tob-heading .tob-heading-buttons {
+
+  position: absolute;
+  right: $padding-base;
+  top: 50%;
+  margin: -15px 0 0 0;
+  padding: 0;
+
+  &, i {
+    line-height: 30px;
+  }
+
+  i {
+    padding: 0 $padding-base;
+    cursor: pointer;
+  }
+
+  + .tob-heading-buttons {
+    color: red;
+  }
+
+}
+
+/* Do not remove the comments below. It's the markers used by gulp-inject to inject
+   all your sass files automatically */
+// injector
+// endinjector

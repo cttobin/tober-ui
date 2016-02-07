@@ -1,0 +1,72 @@
+.tob-modal-container {
+  .tob-modal {
+    position: relative;
+  }
+  .tob-modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: $modal-mask;
+    z-index: $modal-z-index;
+  }
+  .tob-modal-content {
+    @include align(v);
+    position: fixed;
+    width: $modal-width;
+    left: 50%;
+    margin-left: -$modal-width / 2;
+    background-color: white;
+    box-shadow: $modal-shadow;
+    z-index: $modal-z-index + 1;
+  }
+  .tob-modal-header {
+    @include background-colours();
+    display: block;
+    line-height: $modal-header-line-height;
+    padding-left: $padding-large;
+    font-weight: bold;
+    background-color: $light;
+    .tob-modal-header-buttons {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      i {
+        line-height: $modal-header-line-height;
+        display: block;
+        float: right;
+        cursor: pointer;
+        width: $modal-header-button-width;
+        text-align: center;
+        transition: all linear 0.25s;
+        border-left: 1px solid rgba(0, 0, 0, 0.075);
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+  }
+  .tob-modal-body {
+    @include background-colours();
+    display: block;
+    padding: $padding-large;
+  }
+}
+
+.tob-modal-content.ng-enter {
+  transition: opacity .5s ease-out;
+  opacity: 0;
+}
+.tob-modal-content.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+.tob-modal-content.ng-leave {
+  transition: opacity .5s ease-out;
+  opacity: 1;
+}
+.tob-modal-content.ng-leave.ng-leave-active {
+  opacity: 0;
+}

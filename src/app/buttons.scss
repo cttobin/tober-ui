@@ -1,0 +1,64 @@
+@mixin button ($background-color, $color: $button-color) {
+  background-color: $background-color;
+  color: $color;
+  border: 1px solid darken($background-color, 8%);
+  &:hover {
+    background-color: darken($background-color, 4%);
+  }
+}
+
+.tob-button {
+  @include button($balanced);
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: $button-height;
+  padding: 0 $padding-base;
+  color: $button-color;
+  display: inline-block;
+  border-radius: $button-border-radius;
+  background-color: $balanced;
+  cursor: pointer;
+  box-shadow: $button-box-shadow;
+  transition: box-shadow 0.25s linear, background-color 0.25s linear;
+  &:active {
+    box-shadow: $button-shadow-active;
+  }
+  i {
+    margin-right: 8px;
+  }
+  &.tob-balanced {
+    @include button($balanced);
+  }
+  &.tob-positive {
+    @include button($positive);
+  }
+  &.tob-negative {
+    @include button($negative);
+  }
+  &.tob-light {
+    @include button($light, $dark);
+  }
+  &.tob-dark {
+    @include button($dark);
+  }
+}
+
+.tob-block-button {
+  @extend .tob-button;
+  display: block;
+  text-align: center;
+}
+
+a.tob-button {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+button[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

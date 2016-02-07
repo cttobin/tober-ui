@@ -1,0 +1,30 @@
+.tob-sidebar {
+  display: none;
+
+  .tob-sidebar-content, .tob-sidebar-mask {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+  }
+
+  .tob-sidebar-mask {
+    background: $sidebar-mask;
+    right: 0;
+    z-index: $sidebar-z-index;
+  }
+
+  .tob-sidebar-content {
+    @include background-colours();
+    background-color: white;
+    padding: $padding-large;
+    box-shadow: $sidebar-shadow;
+    z-index: $sidebar-z-index + 1;
+    min-width: $sidebar-min-width;
+    max-width: $sidebar-max-width;
+    &.ng-enter {
+      color: red;
+    }
+  }
+
+}

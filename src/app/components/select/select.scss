@@ -1,0 +1,60 @@
+tob-select {
+
+  max-width: 220px;
+  display: block;
+  position: relative;
+  cursor: pointer;
+
+  tob-select-item,
+  .tob-select-active {
+    line-height: $input-line-height;
+    padding: 0 $padding-base;
+  }
+
+  .tob-select-active {
+    border: 1px solid $input-border-colour;
+    border-radius: $input-border-radius;
+    background-color: $input-background-colour;
+    box-shadow: $input-shadow;
+  }
+
+  .tob-select-items {
+    position: absolute;
+    top: $input-line-height + 2px;
+    left: 0;
+    right: 0;
+    border-left: 1px solid $input-border-colour;
+    border-right: 1px solid $input-border-colour;
+    border-bottom: 1px solid $input-border-colour;
+    box-shadow: $input-shadow, $select-items-box-shadow;
+    background-color: $select-background-color;
+    border-bottom-right-radius: $input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
+  }
+
+  tob-select-item {
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.25s linear;
+    &:hover {
+      background-color: $select-item-hover-color;
+    }
+    & + tob-select-item {
+      border-top: 1px solid $select-item-border-color;
+    }
+  }
+
+  .tob-select-icons {
+    position: absolute;
+    right: $padding-base;
+    line-height: $input-line-height;
+    top: 50%;
+    margin-top: -$input-line-height / 2;
+  }
+
+  .tob-select-open {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+}

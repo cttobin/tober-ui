@@ -1,0 +1,11 @@
+<div class="tob-select-active" ng-class="{'tob-select-open': select.listIsOpen}" ng-click="select.toggleList()" ng-cloak>
+  <div ng-transclude="active"></div>
+  <!--<div ng-transclude="placeholder"></div>-->
+</div>
+<div class="tob-select-icons" ng-click="select.toggleList()" ng-cloak>
+  <i class="fa fa-chevron-down" ng-if="!select.listIsOpen"></i>
+  <i class="fa fa-chevron-up" ng-if="select.listIsOpen"></i>
+</div>
+<div class="tob-select-items" ng-if="select.listIsOpen" ng-cloak class="fx-fade-normal">
+  <div ng-transclude="items"></div>
+</div>
