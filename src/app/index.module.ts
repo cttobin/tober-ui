@@ -9,7 +9,7 @@ import { ButtonsController } from './buttons/buttons.controller';
 import { SlidePanelsController } from './slide-panels/slide-panels.controller';
 import { ModalsController } from './modals/modals.controller';
 
-import { modal } from './components/modal/modal.service';
+import { Modal } from './components/modal/modal.service';
 
 import { slidePanel } from './components/slide-panel/slide-panel.directive';
 import { tab } from './components/tab/tab.directive';
@@ -18,6 +18,7 @@ import { select } from './components/select/select.directive';
 import { selectItems } from './components/select-items/select-items.directive';
 import { selectItem } from './components/select-item/select-item.directive';
 import { selectItemActive } from './components/select-item-active/select-item-active.directive';
+
 // import { selectItemPlaceholder } from './components/select-item-placeholder/select-item-placeholder.directive';
 
 
@@ -45,7 +46,7 @@ module uiThing {
     .controller('SlidePanelsController', SlidePanelsController)
     .controller('ModalsController', ModalsController)
 
-    .service('tobModal', modal)
+    .service('tobModal', Modal)
     .directive('tobSelect', select)
     .directive('tobSelectItems', selectItems)
     .directive('tobSelectItem', selectItem)
@@ -53,6 +54,7 @@ module uiThing {
     .directive('tobSlidePanel', slidePanel)
     .directive('tobTab', tab)
     .directive('tobTabs', tabs)
+
   ;
     // .directive('tobSelectPlaceholder', selectItemPlaceholder);
 

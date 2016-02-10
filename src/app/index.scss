@@ -79,10 +79,9 @@ $button-shadow-active: none;
 
 
 // Modals.
-$modal-mask: linear-gradient(40deg, transparent 40%, #34495e), linear-gradient(-40deg, rgba(255, 255, 255, 0.5) 10%, #34495e 90%);
 $modal-width: 420px;
 $modal-shadow: 0 2px 30px rgba(0, 0, 0, 0.5);
-
+$modal-padding: $padding-xx-large;
 $modal-header-line-height: 60px;
 $modal-header-button-width: 50px;
 
@@ -110,6 +109,9 @@ $checkbox-disabled-label-color: #888;
 // Radios.
 $radio-icon-unchecked: '\f10c';
 $radio-icon-checked: '\f192';
+
+// Tabs.
+$tab-padding: $padding-xx-large;
 
 @mixin text-colours () {
   &.balanced { color: $balanced; }
@@ -177,6 +179,27 @@ $radio-icon-checked: '\f192';
   &.balanced { border: 1px solid $balanced; }
   &.positive { border: 1px solid $positive; }
   &.negative { border: 1px solid $negative; }
+}
+
+@mixin negate-padding ($padding) {
+
+  .tob-heading, .tob-content, .tob-footer {
+    margin-left: -$padding;
+    margin-right: -$padding;
+  }
+
+  .tob-heading {
+    margin-top: -$padding;
+  }
+
+  .tob-footer {
+    padding: $padding * 0.75 $padding;
+  }
+
+  .tob-heading,
+  .tob-content {
+    padding: $tab-padding;
+  }
 }
 
 
@@ -476,6 +499,7 @@ $side-bar-heading-border-bottom: 1px solid lighten($side-bar-background-color, 5
 .tob-heading {
   @include background-colours();
   position: relative;
+  box-shadow: inset 0 -1px 1px rgba(0, 0, 0, 0.25);
   h1, h2, h3, h4, h5, h6 {
     padding: 0;
     margin: 0;
@@ -501,10 +525,9 @@ $side-bar-heading-border-bottom: 1px solid lighten($side-bar-background-color, 5
   i {
     padding: 0 $padding-base;
     cursor: pointer;
-  }
-
-  + .tob-heading-buttons {
-    color: red;
+    &:hover {
+      opacity: 0.75;
+    }
   }
 
 }

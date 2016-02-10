@@ -8,7 +8,8 @@
     right: 0;
     left: 0;
     bottom: 0;
-    background: $modal-mask;
+    background-color: $balanced;
+    opacity: 0.8;
     z-index: $modal-z-index;
   }
   .tob-modal-content {
@@ -20,14 +21,16 @@
     background-color: white;
     box-shadow: $modal-shadow;
     z-index: $modal-z-index + 1;
+    @include negate-padding($modal-padding);
+    padding: $modal-padding;
   }
-  .tob-modal-header {
+  .tob-header {
     @include background-colours();
     display: block;
     line-height: $modal-header-line-height;
-    padding-left: $padding-large;
     font-weight: bold;
     background-color: $light;
+    border-bottom: 1px solid red;
     .tob-modal-header-buttons {
       display: block;
       position: absolute;
@@ -52,7 +55,6 @@
   .tob-modal-body {
     @include background-colours();
     display: block;
-    padding: $padding-large;
   }
 }
 
