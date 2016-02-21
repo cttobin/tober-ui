@@ -9,7 +9,9 @@ import { ButtonsController } from './buttons/buttons.controller';
 import { SlidePanelsController } from './slide-panels/slide-panels.controller';
 import { ModalsController } from './modals/modals.controller';
 
+import { Popup } from './components/modal/modal.service';
 import { Modal } from './components/modal/modal.service';
+import { Dialog } from './components/dialog/dialog.service';
 
 import { slidePanel } from './components/slide-panel/slide-panel.directive';
 import { tab } from './components/tab/tab.directive';
@@ -46,7 +48,9 @@ module uiThing {
     .controller('SlidePanelsController', SlidePanelsController)
     .controller('ModalsController', ModalsController)
 
+    .service('tobPopup', Popup)
     .service('tobModal', Modal)
+    .service('tobDialog', Dialog)
     .directive('tobSelect', select)
     .directive('tobSelectItems', selectItems)
     .directive('tobSelectItem', selectItem)

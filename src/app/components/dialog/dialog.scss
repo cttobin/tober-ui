@@ -1,0 +1,30 @@
+$dialog-width: 320px;
+$dialog-padding: $padding-xx-large;
+$dialog-border-radius: 4px;
+
+.tob-dialog .tob-popup-content {
+
+  @include position-popup($dialog-width);
+  border-radius: $popup-border-radius;
+  text-align: center;
+  padding-top: $dialog-padding;
+
+  .tob-content {
+    padding: $padding-base $dialog-padding $padding-xx-large;
+  }
+  .tob-heading {
+    padding-top: $padding-xx-large;
+    padding-bottom: $padding-xx-large;
+    text-transform: uppercase;
+  }
+  .tob-footer {
+    border-radius: 0 0 $dialog-border-radius $dialog-border-radius;
+    padding: $padding-xx-large $dialog-padding;
+  }
+  .tob-button {
+    text-align: center;
+    width: calc(50% - #{$padding-xx-small * 2});
+    margin: $padding-xx-small;
+  }
+
+}
